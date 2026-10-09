@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sauve Qui Cuit !</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>🍳 Sauve Qui Cuit !</h1>
+    <p>L'anti-gaspi au service de votre assiette</p>
+  </header>
+
+  <main class="container">
+
+    <!-- BLOC AUTHENTIFICATION (Visible si NON connecté) -->
+    <div id="authSection">
+      <!-- Formulaire de Connexion -->
+      <section class="card">
+        <h2>Connexion</h2>
+        <form id="loginForm">
+          <input type="email" id="loginEmail" placeholder="Email" required>
+          <input type="password" id="loginPassword" placeholder="Mot de passe" required>
+          <button type="submit">Se connecter</button>
+        </form>
+        <p id="loginMessage" class="message"></p>
+      </section>
+
+      <!-- Formulaire d'Inscription -->
+      <section class="card" style="margin-top: 20px;">
+        <h2>Créer un compte</h2>
+        <form id="registerForm">
+          <input type="text" id="regPseudo" placeholder="Pseudo" required>
+          <input type="email" id="regEmail" placeholder="Email" required>
+          <input type="password" id="regPassword" placeholder="Mot de passe" required>
+          <button type="submit">S'inscrire</button>
+        </form>
+        <p id="regMessage" class="message"></p>
+      </section>
+    </div>
+
+    <!-- ESPACE MEMBRE (Masqué par défaut, visible une fois connecté) -->
+    <div id="appSection" style="display: none;">
+      <!-- Barre d'accueil utilisateur -->
+      <section class="card">
+        <h2>Bienvenue, je t'attendais <span id="userPseudoDisplay"></span> ! 👋</h2>
+        <button id="logoutBtn" style="background-color: #a84448; margin-top: 10px;">Se déconnecter</button>
+      </section>
+
+      <!-- Module Anti-Gaspi / Frigo Vide -->
+      <section class="card" style="margin-top: 20px;">
+        <h2> Mon Frigo Vide</h2>
+        <p>Entrez vos ingrédients restants pour trouver des idées !</p>
+        <form id="fridgeForm">
+          <input type="text" id="fridgeIngredients" placeholder="Ex: tomates, oeufs, fromage..." required>
+          <button type="submit">Trouver des recettes</button>
+        </form>
+      </section>
+
+      <!-- Liste des recettes -->
+      <section class="card" style="margin-top: 20px;">
+        <h2>Recettes suggérées</h2>
+        <div id="recipesList" class="recipes-grid">
+          <p>Chargement des recettes...</p>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

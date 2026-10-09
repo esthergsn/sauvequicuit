@@ -1,0 +1,65 @@
+### Test 1 : test succes user
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+
+{
+  "pseudo": "Esther",
+  "email": "esther@example.com",
+  "password": "Password@@@123!"
+}
+
+### Test 2 : test failde inscription avec mdp faible
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+
+{
+  "pseudo": "Esther",
+  "email": "test@example.com",
+  "password": "123"
+}
+
+### Test 3 : crée une recette anti-gaspi
+POST http://localhost:3000/api/recipes
+Content-Type: application/json
+
+{
+  "title": "Gratin de reste de légumes",
+  "steps": "Mélanger les légumes restants avec de la crème, recouvrir de fromage et enfourner 20 min.",
+  "prepTime": 25
+}
+
+### Recette 1
+POST http://localhost:3000/api/recipes
+Content-Type: application/json
+
+{
+  "title": "Omelette aux tomates et fromage",
+  "ingredients": "oeufs, tomate, fromage, beurre",
+  "steps": "Battre les oeufs, couper les tomates, faire cuire le tout à la poêle avec du fromage.",
+  "prepTime": 10
+}
+
+### Recette 2
+POST http://localhost:3000/api/recipes
+Content-Type: application/json
+
+{
+  "title": "Gratin de pâtes et restes de légumes",
+  "ingredients": "pâtes, courgette, carotte, fromage, crème",
+  "steps": "Mélanger les pâtes cuites et légumes, ajouter la crème et le fromage, enfourner 20 min.",
+  "prepTime": 25
+}
+
+### Recette 3
+POST http://localhost:3000/api/recipes
+Content-Type: application/json
+
+{
+  "title": "Salade fraîcheur anti-gaspi",
+  "ingredients": "tomate, concombre, oeufs, huile, vinaigre",
+  "steps": "Couper tous les ingrédients en dés et mélanger avec une vinaigrette.",
+  "prepTime": 10
+}
+
+### Test 4 : recup toutes les recettes
+GET http://localhost:3000/api/recipes
