@@ -1,72 +1,72 @@
-/* RESET DE BASE : Uniformise les marges et le calcul des tailles d'éléments sur tous les navigateurs */
+/* apparence de base : uniformise les marges et le calcul des tailles d'éléments sur tous les navigateurs */
 * {
-  box-sizing: border-box; /* Inclut les bordures et rembourrages dans la largeur totale */
+  box-sizing: border-box; /* inclut les bordures et rembourrages dans la largeur totale */
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Police moderne et lisible */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* CORPS DE LA PAGE : Définition du fond rose pastel global et de l'espacement externe */
+/* corps de la page : fond rose pastel et de l'espacement externe */
 body {
-  background-color: #fff0f3; /* Fond rose très doux et chaleureux */
-  color: #4a3e3d; /* Couleur de texte marron chaud pour un bon contraste avec le rose */
+  background-color: #fff0f3; 
+  color: #4a3e3d;
   padding: 30px 20px;
 }
 
-/* EN-TÊTE : Mise en page du titre principal et du sous-titre */
+/* en tete : mise en page du titre principal et du sous-titre */
 header {
   text-align: center;
   margin-bottom: 35px;
 }
 
-/* Titre principal de l'application */
+/* titre principal de l'application */
 header h1 {
-  color: #d67d8a; /* Couleur rose poudré élégante */
+  color: #d67d8a; 
   font-size: 2.5rem;
   margin-bottom: 8px;
 }
 
-/* Slogan / Sous-titre sous l'en-tête */
+/* slogan / sous-titre sous l'en-tête */
 header p {
   color: #9e7178;
   font-style: italic;
 }
 
-/* CONTENEUR PRINCIPAL : Centre les cartes au milieu de l'écran et gère l'espacement vertical */
+/* main principal : centre les cartes au milieu de l'écran et gère l'espacement vertical */
 .container {
-  max-width: 850px; /* Limite la largeur maximale pour éviter un affichage trop étiré */
-  margin: 0 auto; /* Centre le conteneur horizontalement */
+  max-width: 850px; /* limite la largeur maximale pour éviter un affichage trop étiré */
+  margin: 0 auto; /* centre le conteneur horizontalement */
   display: flex;
-  flex-direction: column; /* Empile les cartes verticalement */
-  gap: 25px; /* Espacement fixe entre la section Inscription et Recettes */
+  flex-direction: column; /* empile les cartes verticalement */
+  gap: 25px; /* espacement fixe entre la section pour s'inscrire et recettes */
 }
 
-/* CARTES BLANCHES : Blocs de contenu (Formulaire, Liste de recettes) */
+/* carte blanches : block de contenu (formulaire, liste de recettes) */
 .card {
   background: #ffffff;
   padding: 25px;
-  border-radius: 16px; /* Coins arrondis pour un effet doux */
-  box-shadow: 0 4px 15px rgba(214, 125, 138, 0.12); /* Ombre portée légère aux nuances rosées */
-  border: 1px solid #f8d7da; /* Bordure discrète rose pâle */
+  border-radius: 16px; /* coins arrondis */
+  box-shadow: 0 4px 15px rgba(214, 125, 138, 0.12); /* ombre légère pour le contraste */
+  border: 1px solid #f8d7da; 
 }
 
-/* Titres de niveau 2 dans les cartes (ex: "Inscription") */
+/* titres de niveau 2 dans les cartes d'inscription tout ca*/
 .card h2 {
   color: #c45b6a;
   margin-bottom: 15px;
   font-size: 1.4rem;
-  border-bottom: 2px solid #fce4e6; /* Ligne de séparation rosée sous le titre */
+  border-bottom: 2px solid #fce4e6; /* ligne de séparation sous le titre */
   padding-bottom: 8px;
 }
 
-/* FORMULAIRE : Alignement vertical des champs de saisie */
+/* formulaire : alignement vertical des champs de saisie */
 form {
   display: flex;
   flex-direction: column;
-  gap: 12px; /* Espace constant entre chaque champ du formulaire */
+  gap: 12px; /* espace constant entre chaque champ du formulaire */
 }
 
-/* CHAMPS DE SAISIE (Champs texte, email, mot de passe) */
+/* champs ou on saisie (texte, email, mot de passe) */
 input {
   padding: 12px;
   border-radius: 8px;
@@ -75,54 +75,54 @@ input {
   font-size: 1rem;
   color: #4a3e3d;
   outline: none;
-  transition: border-color 0.2s; /* Animation douce lors du clic */
+  transition: border-color 0.2s; /* animation lors du clic */
 }
 
-/* Effet au survol / focus d'un champ texte */
+/* effet dynamique au survol avec la souris */
 input:focus {
-  border-color: #d67d8a; /* La bordure devient rose vif quand l'utilisateur clique dessus */
+  border-color: #d67d8a; /* la bordure devient rose vif quand l'utilisateur clique dessus */
   background-color: #ffffff;
 }
 
-/* BOUTON D'ACTION (S'inscrire) */
+/* bouton d'action quand on s'inscrit */
 button {
   padding: 12px;
   border-radius: 8px;
-  background-color: #d67d8a; /* Fond rose pastel principal */
+  background-color: #d67d8a; /* fond rose pastel principal */
   color: white;
   border: none;
-  cursor: pointer; /* Modifie le curseur au survol */
+  cursor: pointer; /* modifie le curseur au survol */
   font-weight: bold;
   font-size: 1rem;
   transition: background-color 0.2s, transform 0.1s;
 }
 
-/* Effet au survol du bouton par la souris */
+/* effet au survol du bouton par la souris */
 button:hover {
-  background-color: #c45b6a; /* Le rose s'assombrit légèrement au survol */
+  background-color: #c45b6a; /* le rose s'assombrit au survol */
 }
 
-/* Effet au clic enfoncé sur le bouton */
+/* effet au clic enfoncé sur le bouton */
 button:active {
-  transform: scale(0.99); /* L'élément rétrécit très légèrement pour simuler un clic réel */
+  transform: scale(0.99); /* l'élément rétrécit pour simuler un clic réel */
 }
 
-/* MESSAGES D'INFORMATION : Retour visuel en cas de succès ou d'erreur */
+/* Retour visuel en cas de succès ou d'erreur */
 .message {
   margin-top: 10px;
   font-weight: 600;
   text-align: center;
 }
 
-/* GRILLE DE RECETTES : Disposition réactive des cartes de recettes */
+/* Disposition réactive des cartes de recettes */
 .recipes-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* S'adapte automatiquement à l'écran */
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* s'adapte automatiquement à l'écran */
   gap: 18px;
   margin-top: 10px;
 }
 
-/* BLOC RECETTE INDIVIDUEL */
+/* block de recette individuel */
 .recipe-card {
   border: 1px solid #f8d7da;
   padding: 18px;
@@ -131,18 +131,18 @@ button:active {
   transition: transform 0.2s;
 }
 
-/* Animation au survol d'une carte recette */
+/* animation au survol d'une carte recette */
 .recipe-card:hover {
-  transform: translateY(-3px); /* La carte monte légèrement vers le haut */
+  transform: translateY(-3px); /* la carte monte vers le haut */
 }
 
-/* Titre d'une recette */
+/* titre d'une recette */
 .recipe-card h3 {
   color: #c45b6a;
   margin-bottom: 8px;
 }
 
-/* Contenu textuel de la recette (étapes, temps) */
+/* contenu textuel de la recette (étapes, temps) */
 .recipe-card p {
   font-size: 0.95rem;
   line-height: 1.4;
